@@ -704,7 +704,7 @@ CustomBottomSheetController showLiquiMenu({
     context: context,
     backgroundColor:
         backgroundColor ??
-        (Theme.of(context).brightness == Brightness.dark ? Colors.black.withAlpha(200) : Colors.white.withAlpha(200)),
+        (Theme.of(context).brightness == Brightness.dark ?Colors.black.withValues(alpha: 0.2): Colors.white.withAlpha(200)),
     barrierColor: barrierColor,
     width: width ?? 238,
     borderRadius: 20,

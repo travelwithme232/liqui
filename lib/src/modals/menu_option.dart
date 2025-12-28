@@ -258,7 +258,9 @@ class LiquiMenuOption extends StatelessWidget {
               style: TextStyle(
                 fontSize: 15,
                 height: 1.25,
-                color: destructive ? CupertinoColors.destructiveRed : Colors.black,
+                color: destructive ? CupertinoColors.destructiveRed : Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white
+                      : Colors.black,
               ),
             ),
           ),
