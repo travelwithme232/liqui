@@ -218,7 +218,15 @@ class LiquiMenuOption extends StatelessWidget {
                   height: 18,
                   color: destructive ? CupertinoColors.destructiveRed : null,
                 )
-              : Icon(icon, size: 15, color: destructive ? CupertinoColors.destructiveRed : CupertinoColors.label),
+              : Icon(
+                  icon,
+                  size: 15,
+                  color: destructive
+                      ? CupertinoColors.destructiveRed
+                      : Theme.of(context).brightness == Brightness.dark
+                      ? CupertinoColors.white
+                      : CupertinoColors.label,
+                ),
         ),
       );
     }

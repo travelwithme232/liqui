@@ -702,7 +702,9 @@ CustomBottomSheetController showLiquiMenu({
 }) {
   return showLiquiPopover(
     context: context,
-    backgroundColor: backgroundColor ?? Colors.white.withAlpha(200),
+    backgroundColor:
+        backgroundColor ??
+        (Theme.of(context).brightness == Brightness.dark ? Colors.black.withAlpha(200) : Colors.white.withAlpha(200)),
     barrierColor: barrierColor,
     width: width ?? 238,
     borderRadius: 20,
